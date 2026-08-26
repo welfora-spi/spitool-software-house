@@ -1,4 +1,4 @@
-import { ClipboardList, Bot, PenLine, Target, ShieldCheck, CalendarClock, BarChart3, FileCheck2 } from "lucide-react";
+import { ClipboardList, Bot, PenLine, Target, ShieldCheck, CalendarClock, BarChart3, FileCheck2, Sparkles, UserCheck, PlayCircle, ArrowRight, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 import { ProductShell } from "@/components/site/ProductShell";
 import { Reveal } from "@/components/site/Reveal";
@@ -27,20 +27,46 @@ export default function Actelya() {
       previewCaption="Rappresentazione degli operatori AI coordinati da ACTELYA"
       features={features}
     >
-      {/* TRUST HIGHLIGHT */}
+      {/* HUMAN APPROVAL — dedicated highlighted box */}
       <section className="container-x pb-8">
-        <Reveal className="relative overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.05] px-8 py-14 md:px-16 md:py-20">
-          <div className="pointer-events-none absolute -left-20 -bottom-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-          <div className="relative flex flex-col gap-8 md:flex-row md:items-center">
-            <ShieldCheck className="h-12 w-12 shrink-0 text-primary" strokeWidth={1.3} />
+        <Reveal
+          data-testid="approval-highlight"
+          className="relative overflow-hidden rounded-3xl border-2 border-primary/40 bg-primary/[0.06] px-6 py-12 md:px-14 md:py-16"
+        >
+          <div className="pointer-events-none absolute -left-20 -bottom-24 h-80 w-80 rounded-full bg-primary/15 blur-3xl" />
+          <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
+
+          <div className="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-lg shadow-primary/30">
+              <UserCheck className="h-8 w-8" strokeWidth={1.6} />
+            </span>
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary">Elemento di fiducia</p>
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/40 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
+                <Lock className="h-3.5 w-3.5" /> Controllo umano garantito
+              </div>
               <p className="mt-4 max-w-3xl font-heading text-2xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-                L'AI propone, l'operatore umano{" "}
-                <span className="text-primary">approva sempre</span> prima di ogni azione
-                importante.
+                Ogni azione chiave passa <span className="text-primary">sempre dall'approvazione umana</span> prima di essere eseguita.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+                ACTELYA prepara e propone, ma non esegue nulla di importante finché non sei tu ad
+                approvare. Nessun invio, nessuna campagna, nessun contatto senza il tuo via libera.
               </p>
             </div>
+          </div>
+
+          {/* Approval flow */}
+          <div className="relative mt-10 grid grid-cols-1 gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-stretch">
+            <FlowStep icon={Sparkles} step="01" title="L'AI propone" desc="Piano, contenuti e azioni pronti da valutare." />
+            <FlowArrow />
+            <FlowStep
+              icon={UserCheck}
+              step="02"
+              title="Tu approvi"
+              desc="Confermi, modifichi o rifiuti ogni azione chiave."
+              highlight
+            />
+            <FlowArrow />
+            <FlowStep icon={PlayCircle} step="03" title="ACTELYA esegue" desc="Solo dopo la tua approvazione l'azione parte." />
           </div>
         </Reveal>
       </section>
@@ -78,3 +104,32 @@ export default function Actelya() {
     </ProductShell>
   );
 }
+
+const FlowStep = ({ icon: Icon, step, title, desc, highlight }) => (
+  <div
+    className={`flex flex-col rounded-2xl border p-5 ${
+      highlight
+        ? "border-primary/50 bg-background/60 accent-glow"
+        : "border-border bg-background/40"
+    }`}
+  >
+    <div className="flex items-center justify-between">
+      <span
+        className={`flex h-10 w-10 items-center justify-center rounded-xl ${
+          highlight ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"
+        }`}
+      >
+        <Icon className="h-5 w-5" strokeWidth={1.7} />
+      </span>
+      <span className="font-mono text-xs text-muted">{step}</span>
+    </div>
+    <h4 className="mt-4 font-heading text-base font-semibold tracking-tight">{title}</h4>
+    <p className="mt-1.5 text-sm leading-relaxed text-muted">{desc}</p>
+  </div>
+);
+
+const FlowArrow = () => (
+  <div className="flex items-center justify-center py-1 text-primary md:py-0">
+    <ArrowRight className="h-5 w-5 rotate-90 md:rotate-0" />
+  </div>
+);
