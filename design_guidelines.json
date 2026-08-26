@@ -1,0 +1,160 @@
+{
+  "project_name": "SPI Tool",
+  "theme": "dark_mode_default_with_light_toggle",
+  "typography": {
+    "headings": "Outfit",
+    "body": "Inter",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-[1.1] font-medium",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-none font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight leading-snug",
+      "body": "text-base leading-relaxed tracking-normal",
+      "labels": "text-xs uppercase tracking-[0.2em]"
+    },
+    "pairing_archetype": "Tech Startups (Outfit + Inter)",
+    "rules": [
+      "NO Inter, Roboto, or Open Sans for headings.",
+      "Headlines > 32px MUST use tracking-tight or tracking-tighter.",
+      "Overlines MUST be uppercase + tiny + wide spacing."
+    ]
+  },
+  "colors": {
+    "archetype": "SWISS & HIGH-CONTRAST / MODERN SAAS",
+    "primary_accent": "#0055FF",
+    "dark_mode": {
+      "bg": "#0A0A0A",
+      "surface": "#121212",
+      "text": "#F8FAFC",
+      "text_muted": "#94A3B8",
+      "border": "rgba(255,255,255,0.1)"
+    },
+    "light_mode": {
+      "bg": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "text": "#0F172A",
+      "text_muted": "#475569",
+      "border": "rgba(0,0,0,0.05)"
+    },
+    "badges": {
+      "disponibile": "bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/20",
+      "in_prova_beta": "bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20",
+      "in_sviluppo": "bg-[#3B82F6]/10 text-[#3B82F6] border border-[#3B82F6]/20"
+    },
+    "rules": [
+      "No full-screen gradients. Use solid colors with texture.",
+      "Hover state color must be explicitly set and lighter than active state.",
+      "Never use pure transparent backgrounds under content; always use backdrop blur + opacity."
+    ]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing (2-3x more than typical).",
+    "container": "max-w-[1400px] mx-auto px-6 md:px-12",
+    "sections": "py-24 md:py-32 lg:py-40",
+    "grid": {
+      "bento_marketing": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8 lg:gap-12",
+      "rules": [
+        "Asymmetry over symmetry. Tension creates interest.",
+        "Grid children MUST be direct children. Use display: grid."
+      ]
+    },
+    "corners": "rounded-2xl"
+  },
+  "visual_enhancers": {
+    "borders": "1px delicate borders to expose the skeleton. Use grid borders for technical sections.",
+    "shadows": "Subtle ambient shadows in light mode, soft inner glows in dark mode.",
+    "surfaces": [
+      "Glassmorphism (Crystal): backdrop-blur-xl bg-background/70 border-b border-border (for sticky headers)",
+      "Grid Borders: border-collapse style for technical features sections."
+    ]
+  },
+  "motion_and_animations": {
+    "libraries": ["framer-motion", "@studio-freight/react-lenis"],
+    "hero_reveal": "Kinetic Hero: Masked line-by-line text reveal. Use overflow-hidden wrapper, text translates y from 100% to 0 with spring physics.",
+    "scroll_reveals": "Section elements fade in and translate y (20px) when in view, staggered by 0.1s.",
+    "hover_effects": "Magnetic buttons for primary CTAs. Product cards scale (1.02) with border highlight.",
+    "marquee": "Slow, smooth editorial ribbon (react-fast-marquee or framer-motion) with tech/business keywords.",
+    "rules": [
+      "MUST respect prefers-reduced-motion.",
+      "No transition: all. Use specific transition properties."
+    ]
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "sections": [
+        "Kinetic Hero: Huge typography, masked reveal, dynamic 3D/parallax background element.",
+        "Editorial Marquee: Slow moving ribbon with brand keywords.",
+        "'Due mondi, un metodo': Split section (Professionisti vs PMI) - aggressive asymmetry.",
+        "Product Catalog: 4-card Tetris/Bento grid with status badges.",
+        "'Come lavoriamo': Numbered manifesto chapters.",
+        "Trust Box: 'L'AI propone, l'operatore umano approva sempre' (Bold typography, high contrast)."
+      ]
+    },
+    {
+      "name": "Prodotti",
+      "sections": [
+        "Overview Hero",
+        "Comparative Product Table (Shadcn Table, technical grid borders)",
+        "4 Product detail sections (SPI Pension, ACTELYA, RistoAI, Gestionale AI per PMI)"
+      ]
+    },
+    {
+      "name": "Chi Siamo",
+      "sections": [
+        "Company Vision",
+        "Founder Card: Raffaele Patarino, CEO (Spotlight portrait)"
+      ]
+    },
+    {
+      "name": "Contatti",
+      "sections": [
+        "Client-side Form (Shadcn UI) with Product Preselect.",
+        "Demo Booking CTA."
+      ]
+    }
+  ],
+  "image_urls": {
+    "risto_ai": {
+      "url": "https://images.unsplash.com/photo-1556742517-fde6c2abbe11?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjByZXN0YXVyYW50JTIwdGFibGV0JTIwUE9TJTIwZGFya3xlbnwwfHx8fDE3ODc3MzM1MDR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "RistoAI dashboard mockup - modern tablet POS"
+    },
+    "gestionale_ai": {
+      "url": "https://images.unsplash.com/photo-1675865254433-6ba341f0f00b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxjaGF0Ym90JTIwaW50ZXJmYWNlJTIwc21hcnRwaG9uZXxlbnwwfHx8fDE3ODc3MzM1MDR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Gestionale AI - Natural language chatbot interface"
+    },
+    "spi_pension_actelya": {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhdGElMjBhbmFseXRpY3MlMjBkYXNoYm9hcmQlMjBtb2Rlcm58ZW58MHx8fHwxNzg3NzMzNTA0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Analytics dashboard for SPI Pension and ACTELYA"
+    },
+    "founder": {
+      "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbiUyMHBvcnRyYWl0JTIwbW9kZXJufGVufDB8fHx8MTc4NzczMzUwNHww&ixlib=rb-4.1.0&q=85",
+      "description": "Raffaele Patarino - CEO Founder Portrait"
+    }
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: ESCLUSIONE TOTALE: Nessun riferimento a Welfora o Welfora AI in tutta l'applicazione.",
+    "LINGUA: Il sito deve essere interamente in italiano.",
+    "TECNOLOGIA: Usa React.js (.js o .jsx files, non .tsx). Implementa Lenis per smooth scrolling e Framer Motion per micro-animazioni.",
+    "TEMA: Implementa un toggle Dark/Light mode funzionante. Disegna per entrambi.",
+    "COMPONENTI: Usa puro HTML/Tailwind per layout di marketing e griglie bento. Usa Shadcn UI (configurato pesantemente) per form, dialogs e tavole comparative.",
+    "TESTING: Aggiungi attributi 'data-testid' a tutti gli elementi interattivi e pulsanti.",
+    "STILE: Nessun look editoriale-finanziario (no serif, no oro). Solo tech SaaS moderno (sans-serif pulita, badge colorati, ampi spazi bianchi).",
+    "PREZZI: SPI Pension costa 29,90€/mese o 238,80€/anno."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add `.App { text-align: center; }` in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use `sonner` for toasts. Sonner component are located in `/app/src/components/ui/sonner` (no .tsx extension, use .js/.jsx in imports)."
+  ]
+}
