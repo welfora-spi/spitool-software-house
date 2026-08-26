@@ -82,7 +82,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-border pt-8 text-xs text-muted md:flex-row md:items-center md:justify-between">
-          <p>© {year} SPI Tool — New Welfare S.r.l. · P.IVA IT00000000000 · Robbiate (LC)</p>
+          <p>© {year} SPI Tool — New Welfare S.r.l. · P.IVA IT00000000000 · Robbiate (LC) · v1.0.1</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-primary">
               Privacy
