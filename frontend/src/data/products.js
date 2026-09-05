@@ -15,7 +15,7 @@ export const IMAGES = {
     "https://static.prod-images.emergentagent.com/jobs/38d9863e-acdf-4654-a427-8a4a108720a7/images/fdcbcecd7ff96bac5e48cbcadda79e67eefa0641e5d2ee3159c2c86c50db0daf.jpeg",
 };
 
-export const APP_URL = "https://app.spitool.it";
+export const APP_URL = "https://pension.spitool.it";
 
 // status: "disponibile" | "beta" | "sviluppo"
 export const PRODUCTS = [
